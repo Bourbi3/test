@@ -1,7 +1,7 @@
 FROM alpine:3.13.5
 
 # Install necessary packages
-RUN apk update && apt-get install -y \
+RUN apk update && apk install -y \
     sudo \
     && rm -rf /var/lib/apt/lists/*
 
