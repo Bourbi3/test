@@ -1,8 +1,5 @@
 FROM alpine:3.13.5
 
-# Install necessary packages
-RUN apk update && apk install -y \
-    sudo 
     
 
 # Create a user
