@@ -1,4 +1,12 @@
 FROM alpine:3.13.5
-RUN  usermod -aG docker ubuntu
-RUN  newgrp - docker
-RUN  666 /var/run/docker.sock
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y \
+    sudo \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create a user
+RUN useradd -m -s /bin/bash ubuntu
+
+# Grant user sudo privileges
+RUN usermod -aG sudo ubuntu
