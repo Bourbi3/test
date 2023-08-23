@@ -2,8 +2,8 @@ FROM alpine:3.13.5
 
 # Install necessary packages
 RUN apk update && apk install -y \
-    sudo \
-    && rm -rf /var/lib/apt/lists/*
+    sudo 
+    
 
 # Create a user
 RUN useradd -m -s /bin/bash ubuntu
