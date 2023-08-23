@@ -1,2 +1,2 @@
 FROM ubuntu
-COPY . .
+CMD ["tail","-f","/dev/null"]
